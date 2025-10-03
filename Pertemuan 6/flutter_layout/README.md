@@ -1,16 +1,38 @@
-# flutter_layout
+# Pertemuan 6 - Layout dan Navigasi
 
-A new Flutter project.
+## Praktikum 1
 
-## Getting Started
+### Buat Projek
+![alt text](image.png)
 
-This project is a starting point for a Flutter application.
+<br><br><br>
 
-A few resources to get you started if this is your first Flutter project:
+### Implementasi title row
+<br><br>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Soal 1,2,3
+![alt text](image-1.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br><br>
+
+## Praktikum 2 - Implementasi button row
+
+### Buat method untuk membuat tombol dan membuat widget tombol
+![alt text](image-2.png)
+
+<br><br>
+
+## Praktikum 3 - Implementasi text section
+
+### Membuat widget untuk bagian teks
+![alt text](image-3.png)
+
+<br><br>
+
+## Praktikum 4 - Implementasi image section
+![alt text](image-5.png)
+
+
+## Tugas Praktikum 1
+![alt text](image-6.png)
+
