@@ -45,6 +45,12 @@ membuat basic layout
 
 
 ## Tugas Praktikum 2
+Membuat aplikasi belanja
+<br>
+![alt text](image-9.png) 
+<br>
+![alt text](image-10.png)
+
 
 
 
