@@ -1,5 +1,6 @@
 import 'package:belanja/models/Item.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -46,12 +47,12 @@ class HomePage extends StatelessWidget {
             final item = items[index];
             return InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/item', arguments: item);
+                context.push('/item', extra: item);
               },
               child: Container(
-                width: 160, 
+                width: 160,
                 height: 220,
-                padding: EdgeInsets.fromLTRB(10,6,10,6),
+                padding: EdgeInsets.fromLTRB(10, 6, 10, 6),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),

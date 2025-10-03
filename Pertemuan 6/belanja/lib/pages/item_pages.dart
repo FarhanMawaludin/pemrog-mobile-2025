@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:belanja/models/Item.dart';
 
 class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+  final Item item; // ✅ properti item
+
+  const ItemPage({super.key, required this.item}); // ✅ konstruktor wajib item
 
   @override
   Widget build(BuildContext context) {
-    final Item item = ModalRoute.of(context)!.settings.arguments as Item;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -69,18 +69,15 @@ class ItemPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                Text(
+                const Text(
                   "Deskripsi",
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Column(
                   children: [
                     Text(
-                      "Stok Barang : ${item.stok.toString()}",
+                      "Stok Barang : ${item.stok}",
                       style: const TextStyle(fontSize: 16),
                     ),
                   ],
