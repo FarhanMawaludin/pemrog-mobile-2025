@@ -1,7 +1,7 @@
 # master_plan
 
 
-# Laporan Praktikum 
+# Laporan Praktikum 1
 
 ## 2. Penjelasan Maksud dari Langkah 4 (data_layer.dart)
 
@@ -59,3 +59,60 @@ Pada Langkah 9, kita membuat sebuah widget bernama _buildTaskTile() yang berfung
 
 -   Digunakan untuk memberi tahu Flutter bahwa data berubah.
 -   Memicu rebuild UI agar tampilannya update.
+
+
+
+
+
+# Laporan Praktikum 2
+
+## 2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
+
+
+``` dart
+class MasterPlanProvider extends InheritedNotifier<ValueNotifier<MasterPlan>> {
+  const MasterPlanProvider({
+    super.key,
+    required super.notifier,
+    required super.child,
+  });
+
+  static ValueNotifier<MasterPlan> of(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<MasterPlanProvider>()!
+        .notifier!;
+  }
+}
+
+```
+
+- InheritedWidget Mendistribusikan data ke seluruh widget di bawahnya (subtree)
+
+
+------------------------------------------------------------------------
+
+## 3. Jelaskan maksud dari method pada langkah 3!
+
+``` dart
+static ValueNotifier<MasterPlan> of(BuildContext context) {
+  return context
+      .dependOnInheritedWidgetOfExactType<MasterPlanProvider>()!
+      .notifier!;
+}
+
+```
+akses cepat + auto register dependency + auto rebuild.
+
+------------------------------------------------------------------------
+## 4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+![alt text](assets/demo-2.gif)
+
+Tampilan daftar Task menggunakan ListView.builder
+
+Setiap task ditampilkan sebagai CheckboxListTile
+
+Ketika user mengubah checkbox, task berubah status
+
+UI diperbarui otomatis karena menggunakan InheritedNotifier
+
+
