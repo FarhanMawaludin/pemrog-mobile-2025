@@ -116,3 +116,5 @@ Ketika user mengubah checkbox, task berubah status
 UI diperbarui otomatis karena menggunakan InheritedNotifier
 
 
+# Laporan Praktikum 3
+![alt text](assets/demo-3.gif)
